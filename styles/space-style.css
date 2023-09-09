@@ -1,0 +1,550 @@
+/* ------------------------ shadow ------------------------ */
+
+.shadow-blue {
+    filter: drop-shadow(0px 0px 7px #1E6A85);
+}
+
+.shadow-light-blue {
+    filter: drop-shadow(0px 0px 7px #6DD5FA);
+}
+
+.shadow-white {
+    filter: drop-shadow(0px 0px 7px #FFFFFF);
+    transition: 1s ease;
+}
+
+.shadow-grey {
+    filter: drop-shadow(0px 0px 7px #434343);
+}
+
+/* ------------------------ phone ------------------------ */
+
+.phone {
+    position: relative;
+    /* border: 8px solid black; */
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background: #211C1D;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 
+    0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+/* ------------------------ Layer 1 ------------------------ */
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.layer-1 img {
+    height: 1220px;
+}
+
+/* ------------------------ Layer 2 ------------------------ */
+
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.layer-2_content {
+    position: relative;
+    height: 600px;
+    width: 300px;
+}
+
+.layer-2_content img:nth-child(1) {
+    position: absolute;
+    left: 225px;
+    top: 175px;
+    height: 32px;
+    opacity: 0.7;
+    animation: stars 7s infinite alternate;
+}
+
+.layer-2_content img:nth-child(2) {
+    position: absolute;
+    left: 23px;
+    top: 434px;
+    height: 42px;
+    opacity: 0.7;
+    animation: stars 6.5s infinite alternate;
+}
+
+@keyframes stars {
+    0% {
+        transform: scale(1) rotate(282deg);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+/* ------------------------ Layer 3 ------------------------ */
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    left: 18px;
+    top: 27px;
+    animation: planet-1 9s infinite alternate;
+}
+
+@keyframes planet-1 {
+    0% {
+        transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(22deg);
+    }
+}
+
+.layer-3_content {
+    position: relative;
+    height: 71px;
+    width: 120px;
+}
+
+.layer-3 input[type=checkbox] {
+    appearance: none;
+    z-index: 5;
+    height: 33px;
+    width: 21px;
+    margin: 0;
+    top: 45px;
+    left: 96px;
+    position: absolute;
+    transform: rotate(355deg);
+    cursor: pointer;
+}
+
+.layer-3_image1 {
+    position: absolute;
+    height: 31px;
+    z-index: 3;
+    top: 45px;
+    left: 96px;
+    transform: rotate(156deg);
+    transition: 1s ease;
+}
+
+.layer-3_image2 {
+    position: absolute;
+    height: 71px;
+    z-index: 4;
+    transform: rotate(212deg);
+}
+
+/* ------------------------ Layer 4 ------------------------ */
+
+.layer-4 {
+    position: absolute;
+    z-index: 5;
+    top: 411px;
+    left: 206px;
+    animation: rocket-1 15s infinite linear;
+}
+
+@keyframes rocket-1 {
+    0% {
+        transform: translate(-105px, 193px);
+    }
+    100% {
+        transform: translate(237px, -424px);
+    }
+}
+
+.layer-4 img {
+    height: 81px;
+    transform: rotate(13deg);
+}
+
+/* ------------------------ Layer 5 ------------------------ */
+
+.layer-5 {
+    position: absolute;
+    left: 160px;
+    top: 455px;
+    z-index: 6;
+    animation: planet-2 10s infinite alternate;
+}
+
+@keyframes planet-2 {
+    0% {
+        transform: rotate(355deg);
+    }
+    100% {
+        transform: rotate(320deg);
+    }
+}
+
+.layer-5_content {
+    position: relative;
+    width: 123px;
+    height: 117px;
+}
+
+.layer-5_content input[type=checkbox] {
+    z-index: 3;
+    appearance: none;
+    width: 35px;
+    height: 55px;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    animation: input-1 8s infinite alternate;
+}
+
+@keyframes input-1 {
+    0% {
+        transform: rotate(160deg) translate(-35px, 1px);
+    }
+    100% {
+        transform: rotate(160deg) translate(-35px, 5px);
+    }
+}
+
+.layer-5_image1 {
+    height: 117px;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(59deg);
+}
+
+.layer-5_image2 {
+    height: 55px;
+    position: absolute;
+    transform: rotate(138deg) translate(-35px, -9px);
+    animation: astronaut-1 8s infinite alternate;
+    transition: 1s ease;
+}
+
+@keyframes astronaut-1 {
+    0% {
+        transform: rotate(136deg) translate(-33px, -14px);
+    }
+    100% {
+        transform: rotate(138deg) translate(-35px, -9px);
+    }
+}
+
+/* ------------------------ Layer 6 ------------------------ */
+
+.layer-6 {
+    position: absolute;
+    z-index: 7;
+    top: 755px;
+    left: -131px;
+    animation: rocket-2 40s infinite linear alternate;
+}
+
+@keyframes rocket-2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    100% {
+        transform: translate(550px, -1034px) rotate(360deg);
+    }
+}
+
+.layer-6_content {
+    position: relative;
+    width: 87px;
+    height: 100px;
+}
+
+.layer-6_image1 {
+    position: absolute;
+    height: 30px;
+    animation: astronaut-2 1s infinite alternate;
+    transition: 1s ease;
+}
+
+@keyframes astronaut-2 {
+    0% {
+        transform: rotate(21deg) translate(69px, 67px);
+    }
+    100% {
+        transform: rotate(24deg) translate(71px, 64px);
+    }
+}
+
+.layer-6_image2 {
+    position: absolute;
+    height: 100px;
+    transform: rotate(64deg);
+}
+
+.layer-6_content input[type=checkbox] {
+    z-index: 3;
+    appearance: none;
+    width: 19px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    animation: input-2 1s infinite alternate;
+}
+
+@keyframes input-2 {
+    0% {
+        transform: rotate(41deg) translate(88px, 38px);
+    }
+    100% {
+        transform: rotate(45deg) translate(89px, 33px);
+    }
+}
+
+/* ------------------------ Layer 7 ------------------------ */
+
+.layer-7 {
+    position: absolute;
+    z-index: 8;
+    top: 50%;
+    margin-top: -114px;
+    left: 50%;
+    margin-left: -119px;
+}
+
+.layer-7_content {
+    position: relative;
+    width: 220.975px;
+    height: 218px;
+}
+
+.layer-7_image1 {
+    height: 218px;
+    position: absolute;
+}
+
+.layer-7_text {
+    position: absolute;
+    font-family: 'Asap Condensed', sans-serif;
+    color: #FFF;
+    text-align: center;
+    width: 100px;
+    top: 50%;
+    margin-top: -36px;
+    left: 50%;
+    margin-left: -36px;
+}
+
+.layer-7 h1 {
+    background: #6DD5FA; 
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #FFFFFF, #6DD5FA);
+
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    margin: 0 0 2px 0;
+
+    animation: text-animation 5s ease-in-out infinite;
+}
+
+@keyframes text-animation {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+.layer-7 p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    margin: 0 0 6px 0;
+}
+
+.layer-7_button {
+    position: relative;
+    padding: 4px 6px;
+    font-family: 'Asap Condensed', sans-serif;
+    background-color: #211C1D;
+    border: #FFF solid 1.6px;
+    color: #FFF;
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.game-over {
+    animation: complete 2s linear infinite alternate;
+}
+
+@keyframes complete {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.button-back {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -31px;
+    left: -100px;
+}
+.button-animation {
+    transform: translate(180px, 0px) ;
+    transition: 0.5s ease;
+}
+
+.button-background {
+    width: 80px;
+    height: 80px;
+    transform: rotate(25deg);
+    background: rgb(30,106,133);
+    background: linear-gradient(90deg, rgba(30,106,133,1) 0%, rgba(109,213,250,1) 50%, rgba(255,255,255,1) 100%);
+    filter: drop-shadow(0px 0px 7px #FFFFFF);
+    opacity: 0.8;
+}
+
+/* ------------------------ Layer 8 ------------------------ */
+
+.layer-8 {
+    position: absolute;
+    z-index: 9;
+    left: 196px;
+    top: 240px;
+    animation: astronaut-3 4s infinite alternate;
+}
+
+@keyframes astronaut-3 {
+    0% {
+        transform: translateY(0) rotate(321deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(330deg);
+    }
+}
+
+.layer-8 img {
+    height: 60px;
+    transition: 1s ease;
+}
+
+.layer-8 input[type=checkbox] {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    height: 60px;
+    width: 38px;
+    cursor: pointer;
+    transform: rotate(17deg);
+    z-index: 1;
+    appearance: none;
+    margin: 0;
+}
+
+/* ------------------------ Layer 8 ------------------------ */
+
+.layer-9 {
+    z-index: 10;
+    position: absolute;
+    animation: rocket-3 11s infinite linear;
+}
+
+@keyframes rocket-3 {
+    0% {
+        transform: translate(920px, -35px);
+    }
+    50% {
+        transform: translate(920px, -35px);
+    }
+    100% {
+        transform: translate(-379px, 515px);
+    }
+}
+
+.layer-9 img {
+    height: 143px;
+}
+
+/* ------------------------ Layer 10 ------------------------ */
+
+.layer-10 {
+    z-index: 11;
+    position: absolute;
+    left: 94px;
+    top: -122px;
+    animation: astronaut-4 15s linear infinite;
+}
+
+@keyframes astronaut-4 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg) scale(0.4);
+    }
+    20% {
+        transform: translate(119px, 144px) rotate(-6deg) scale(0.4);
+    }
+    80% {
+        transform: translate(0px, 0px) rotate(360deg) scale(1.2);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(360deg) scale(1.2);
+    }
+}
+
+.layer-10 img {
+    height: 67px;
+    transition: 1s ease;
+}
+
+.layer-10 input[type=checkbox] {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    height: 67px;
+    width: 42.4306px;
+    cursor: pointer;
+    transform: rotate(17deg);
+    z-index: 1;
+    appearance: none;
+    margin: 0;
+}
+
+/* ------------------------ Layer 11 ------------------------ */
+
+.layer-11 {
+    z-index: 12;
+    position: absolute;
+    left: 24px;
+    top: -152px;
+    animation: rocket-4 15s linear infinite;
+}
+
+@keyframes rocket-4 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg) scale(0.5);
+    }
+    20% {
+        transform: translate(117px, 151px) rotate(-6deg) scale(0.8);
+    }
+    40% {
+        transform: translate(350px, 300px) rotate(-24deg) scale(1.4);
+    }
+    100% {
+        transform: translate(350px, 300px) rotate(-24deg) scale(1.4);
+    }
+}
+
+.layer-11 img {
+    height: 128px;
+}
